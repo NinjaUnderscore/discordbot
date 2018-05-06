@@ -47,24 +47,6 @@ async def on_message(message):
         await client.delete_message(message)
         await client.send_message(message.channel, embed=gun)
 
-    elif message.content.startswith("?thatsheresy"):
-        embed = discord.Embed()
-        thatsheresy = embed.set_image(url='http://i0.kym-cdn.com/photos/images/facebook/001/208/722/808.jpg')
-        await client.delete_message(message)
-        await client.send_message(message.channel, embed=thatsheresy)
-
-    elif message.content.startswith("?itsays"):
-        embed = discord.Embed()
-        itsays = embed.set_image(url='http://i0.kym-cdn.com/photos/images/facebook/000/706/073/4cf.jpg')  
-        await client.delete_message(message)
-        await client.send_message(message.channel, embed=itsays)
-    
-    elif message.content.startswith("?notfine"):
-        embed = discord.Embed()
-        notfine = embed.set_image(url='https://cdn.discordapp.com/attachments/342216929982808066/347541935990374400/not_fine.gif')
-        await client.delete_message(message)
-        await client.send_message(message.channel, embed=notfine)
-
     elif message.content.startswith("?delet"):
         embed = discord.Embed()
         delet = embed.set_image(url='https://cdn.discordapp.com/attachments/342216929982808066/347541962305568769/Igotthis_258d31f8f47ec27e84df2276877e7180.jpg')
@@ -76,8 +58,6 @@ async def on_message(message):
         embed = discord.Embed(title="Commands:", description="Need commands? Here you go!   ",)
         embed.add_field(name="?ping", value="Ping pong!", inline=False)
         embed.add_field(name="?greetings", value="Say hello!", inline=False)
-        embed.add_field(name="?thatsheresy", value="Thats heresy.", inline=False)
-        embed.add_field(name="?itsays", value="That you are a heretic.", inline=False)
         embed.add_field(name="?delet", value="Delete this heresy.", inline=False)
         embed.add_field(name="?notfine", value="Why are we still here? Just to suffer?", inline=False)
         embed.add_field(name="?gun", value="GUN", inline=False)
